@@ -12,9 +12,7 @@ if [[ ! -f "$audio_path" ]]; then
     chmod 444 "$audio_path" # make sure that it can be played, and also make it harder for them to delete
 fi
 
-mpg123 -q "$audio_path"
-
-# crontab -l | {
-#     cat
-#     echo "* * * * * $(pwd)/torture.sh"
-# } | crontab -
+crontab -l | {
+    cat
+    echo "* * * * * mpg123 -q \"$audio_path\""
+} | crontab -
