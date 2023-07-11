@@ -5,3 +5,5 @@ Set a permanent, random frequency gnome sound to play on hour computer forever. 
 ## Usage
 
 Simply install `mpg123` with any package manager, then run `./setup.sh` from within the project's root directory
+
+Make sure that setup.sh has executable permissions (`chmod +x setup.sh`)
