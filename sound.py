@@ -1,15 +1,16 @@
-from time import sleep
-import pygame
+import sounddevice as sd
+import soundfile as sf
 
+import random
+import os
 
-def play_audio_file(file_path):
-    pygame.mixer.init()
-    pygame.mixer.music.load(file_path)
-    pygame.mixer.music.play()
+script_dir = os.path.dirname(os.path.abspath(__file__))
+sound_file = os.path.join(script_dir, 'gnome.mp3')
 
+weights = [0.7, 0.2, 0.1]
+num = random.choices([1, 2, 3], weights=weights, k=1)[0]
 
-# Provide the path to your MP3 audio file
-audio_file_path = "/var/tmp/gnome.mp3"
-
-# Play the MP3 file using pygame
-play_audio_file(audio_file_path)
+data, fs = sf.read(sound_file)
+for i in range(num):
+    sd.play(data, fs)
+    sd.wait()

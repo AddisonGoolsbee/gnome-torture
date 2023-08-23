@@ -10,5 +10,9 @@ if ! command -v pip >/dev/null 2>&1; then
     exit 2
 fi
 
-pip install sounddevice soundfile &> /dev/null
-python3 test.py
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+pip install sounddevice soundfile &>/dev/null
+python3 "${script_dir}/sound.py"
+
+# remember to erase history
