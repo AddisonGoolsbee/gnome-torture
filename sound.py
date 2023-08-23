@@ -1,8 +1,15 @@
 from time import sleep
-from mpg123 import Mpg123, Out123
+import pygame
 
-mp3 = Mpg123("/home/addisongoolsbee/Desktop/gnome-torture/gnome")
-out = Out123()
 
-for frame in mp3.iter_frames(out.start):
-    out.play(frame)
+def play_audio_file(file_path):
+    pygame.mixer.init()
+    pygame.mixer.music.load(file_path)
+    pygame.mixer.music.play()
+
+
+# Provide the path to your MP3 audio file
+audio_file_path = "/var/tmp/gnome.mp3"
+
+# Play the MP3 file using pygame
+play_audio_file(audio_file_path)
