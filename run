@@ -1,18 +1,7 @@
 #!/bin/bash
 
-if ! command -v python3 >/dev/null 2>&1; then
-    echo "Please install python"
-    exit 1
-fi
+dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-if ! command -v pip >/dev/null 2>&1; then
-    echo "Please install pip"
-    exit 2
-fi
-
-script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-pip install sounddevice soundfile &>/dev/null
-python3 "${script_dir}/sound.py"
+/usr/bin/afplay "${dir}/gnome.mp3"
 
 # remember to erase history
