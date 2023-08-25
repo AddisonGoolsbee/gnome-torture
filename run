@@ -14,7 +14,7 @@ if [ ! -e ~/Library/gnome.mp3 ]; then
 fi
 
 if [ -e ~/Library/LaunchAgents/com.gnome.plist ]; then
-    launchctl unload com.gnome.plist
+    launchctl unload "${dir}/com.gnome.plist"
     rm ~/Library/LaunchAgents/com.gnome.plist
 fi
 
