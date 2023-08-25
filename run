@@ -19,4 +19,4 @@ if [ -e ~/Library/LaunchAgents/com.gnome.plist ]; then
 fi
 
 cp "${dir}/com.gnome.plist" ~/Library/LaunchAgents/
-launchctl load "${dir}/com.gnome.plist
+launchctl load "${dir}/com.gnome.plist"
