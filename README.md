@@ -1,17 +1,17 @@
 # Gnome Torture
 
-Set a permanent gnome sound to play every minute or so on your computer forever. The perfect troll when a friend leaves their computer open. 
+Set a permanent gnome sound to play every minute or so on a computer forever. The perfect troll when a friend leaves their computer open.
 
-This script will continue even if the user closes all applications, even if they restart their computer. Depending on how nefarious you want to be, you can make it practically impossible to remove
+This script will continue even if the user closes all applications and restarts their computer. Depending on how nefarious you want to be, you can make it practically impossible to remove
 
-*This script only works for Apple computers*
+TL;DR: type this line into terminal `git clone https://github.com/AddisonGoolsbee/gnome-torture && gnome-torture/run && rm -rf gnome-torture`
+
+_This script only works for Apple computers_
 
 ## Usage
 
 1. Type `run` in the command line
 2. Remove this folder so you leave no trace :smiling_imp:
-
-Here is a single command that download the code, run it, and then delete the code: `git clone https://github.com/AddisonGoolsbee/gnome-torture &&`
 
 ## Stopping the Script
 
