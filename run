@@ -7,7 +7,7 @@ SOUND_LOCATION="${HOME}/Library/gnome.mp3"
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cp "${dir}/com.gnomeTemplate.plist" "${dir}/com.gnome.plist"
-sed -i '' "s/AAAAA/$(echo $HOME | sed 's/\//\\\//g')/g" "${dir}/com.gnome.plist"
+sed -i '' "s/AAAAA/$(echo $SOUND_LOCATION | sed 's/\//\\\//g')/g" "${dir}/com.gnome.plist"
 
 if [ ! -e ~/Library/gnome.mp3 ]; then
     cp "${dir}/gnome.mp3" $SOUND_LOCATION
