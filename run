@@ -1,7 +1,23 @@
 #!/bin/bash
 
+# Change this if you want to hide the sound file better -- deleting the sound file is the easiest way to stop the program
+SOUND_LOCATION="${HOME}/Library/gnome.mp3"
+
 dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-/usr/bin/afplay "${dir}/gnome.mp3"
+cp "${dir}/com.gnomeTemplate.plist" "${dir}/com.gnome.plist"
+sed -i '' "s/AAAAA/$(echo $HOME | sed 's/\//\\\//g')/g" "${dir}/com.gnome.plist"
 
-# remember to erase history
+if [ ! -e ~/Library/gnome.mp3 ]; then
+    cp "${dir}/gnome.mp3" $SOUND_LOCATION
+fi
+
+if [ -e ~/Library/LaunchAgents/com.gnome.plist ]; then
+    launchctl unload com.gnome.plist
+    rm ~/Library/LaunchAgents/com.gnome.plist
+fi
+
+cp "${dir}/com.gnome.plist" ~/Library/LaunchAgents/
+launchctl load com.gnome.plist
+
+# # remember to erase history

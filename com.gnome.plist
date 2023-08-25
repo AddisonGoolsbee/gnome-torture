@@ -9,7 +9,7 @@
     <key>ProgramArguments</key>
     <array>
         <string>/usr/bin/afplay</string>
-	<string>/usr/local/gnome.mp3</string>
+	    <string>/Users/addisongoolsbee/Library/gnome.mp3</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
