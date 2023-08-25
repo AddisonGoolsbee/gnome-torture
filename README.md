@@ -11,6 +11,8 @@ This script will continue even if the user closes all applications, even if they
 1. Type `run` in the command line
 2. Remove this folder so you leave no trace :smiling_imp:
 
+Here is a single command that download the code, run it, and then delete the code: `git clone https://github.com/AddisonGoolsbee/gnome-torture &&`
+
 ## Stopping the Script
 
 - If you can find and delete the `gnome.mp3` file, that will be enough to stop the sound

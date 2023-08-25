@@ -14,10 +14,9 @@ if [ ! -e ~/Library/gnome.mp3 ]; then
 fi
 
 if [ -e ~/Library/LaunchAgents/com.gnome.plist ]; then
-    echo hey
     launchctl unload com.gnome.plist
     rm ~/Library/LaunchAgents/com.gnome.plist
 fi
 
 cp "${dir}/com.gnome.plist" ~/Library/LaunchAgents/
-launchctl load com.gnome.plist
+launchctl load "${dir}/com.gnome.plist
