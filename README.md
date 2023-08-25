@@ -16,7 +16,7 @@ _This script only works for Apple computers_
 ## Stopping the Script
 
 - If you can find and delete the `gnome.mp3` file, that will be enough to stop the sound
-- If the daemon file still exists, you can run `launchctl unload com.gnome.plist`
+- If the daemon file still exists, you can run `launchctl unload ~/Library/LaunchAgents/com.gnome.plist`
 
 ## Making it Harder to Stop the Script
 
