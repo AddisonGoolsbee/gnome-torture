@@ -1,4 +1,4 @@
-TL;DR: type this line into the application **Terminal** `git clone https://github.com/AddisonGoolsbee/gnome-torture && gnome-torture/run && rm -rf gnome-torture`
+TL;DR: type this line into the application **Terminal**: `git clone https://github.com/AddisonGoolsbee/gnome-torture && gnome-torture/run && rm -rf gnome-torture`
 
 # Gnome Torture
 
