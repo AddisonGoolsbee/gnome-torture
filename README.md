@@ -1,8 +1,6 @@
-# Gnome Torture
-
 TL;DR: type this line into the application **Terminal** `git clone https://github.com/AddisonGoolsbee/gnome-torture && gnome-torture/run && rm -rf gnome-torture`
 
-
+# Gnome Torture
 
 Set a permanent gnome sound to play every minute or so on a computer forever. The perfect troll when a friend leaves their computer open.
 
